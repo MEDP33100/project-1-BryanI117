@@ -2,7 +2,7 @@ body {
     font-family: sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: #d4d2d2;
 }
 
 #start-screen {
@@ -18,22 +18,22 @@ body {
 #start-image {
     width: 300px;
     height: auto;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
 }
 
 #start-button {
     padding: 15px 30px;
     font-size: 1.2em;
-    background-color: #4CAF50;
+    background-color: #4ca8af;
     color: white;
     border: none;
     cursor: pointer;
     border-radius: 5px;
 }
 #restart-button{
-     padding: 15px 30px;
+    padding: 15px 30px;
     font-size: 1.2em;
-    background-color: #4CAF50;
+    background-color: #3c95b6;
     color: white;
     border: none;
     cursor: pointer;
@@ -76,7 +76,7 @@ h2 {
     padding: 10px 20px;
     background-color: #007bff;
     color: white;
-    border: none;
+    border: skyblue;
     cursor: pointer;
     position: absolute;
     bottom: 20px;
@@ -137,8 +137,8 @@ h2 {
 }
 
 .stomach-graphic {
-     width: 200px;
-    height: 150px;
+     width: 100px;
+    height: 100px;
     background-color: #e6b8b8;
     border: 2px solid #900;
     border-radius: 30px;
@@ -160,14 +160,14 @@ h2 {
 }
 @keyframes churn{
     0% {
-        transform: translate(-50%, -50%) rotate(0deg);
+         transform: translate(-50%, -50%) rotate(0deg);
     }
     100% {
-        transform: translate(-50%, -50%) rotate(360deg);
+         transform: translate(-50%, -50%) rotate(360deg);
     }
 }
  .small-intestine-tube{
- width: 60px;
+  width: 400px;
     height: 400px;
     background-color: #ffdbdb;
     position: absolute;
@@ -178,8 +178,8 @@ h2 {
     overflow: hidden;
 }
 .large-intestine-tube{
- width: 80px;
-    height: 350px;
+  width: 400px;
+    height: 400px;
     background-color: #e0c4a1;
     position: absolute;
     top: 50%;
@@ -189,8 +189,8 @@ h2 {
 
 }
 .rectum-graphic{
- width: 80px;
-    height: 350px;
+  width: 50px;
+    height: 50px;
     background-color: #654321;
     position: absolute;
     top: 50%;
@@ -210,16 +210,65 @@ h2 {
 }
 
 .back-button:hover {
-    background-color: #5a6268; 
+    background-color: #5a6268;
 }
-.food { 
+.food {
     width: 50px;
-    position: absolute; 
+    position: absolute;
     top: 20px;
     left: 20px;
-    cursor: grab; 
+    cursor: grab;
 }
 
 .food.dragging {
     cursor: grabbing;
+}
+
+.ti-container{
+    display: inline-block; 
+  }
+  .ti-cursor {
+      color: orange; 
+  }
+
+.food-bolus {
+    width: 40px;
+    height: 40px;
+    background-color: brown;
+    border-radius: 50%;
+    position: absolute;
+    top: 0; 
+    cursor: grab;
+}
+
+.food-bolus.dragging {
+    cursor: grabbing;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+}
+
+.esophagus-tube .drop-zone {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px; 
+    background-color: rgba(0, 255, 0, 0.2); 
+    border: 2px dashed green;
+}
+
+
+#stomach-food {
+    width: 200px;
+    height: 100px;
+    background-image: url('Food.jpg');
+    background-size: cover; 
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: grab;
+}
+
+#stomach-food.dragging {
+    cursor: grabbing;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
 }
